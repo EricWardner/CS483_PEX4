@@ -73,14 +73,17 @@ int main(int argc, char **argv)
 
 		// this next line prints the page number that was referenced.
 		// Note the use of %lu as it is an unsigned long!  Might be useful when debugging.
-		// printf("%lu\n",page_num);
+		//if(num_accesses<4){
+		//	printf("%lu\n",page_num);
+		//}
+		
 
 		num_accesses++;
 
 		// more code possibly useful for debugging... gives an indication of progress being made
-		//if((num_accesses % 100000) == 0){
-		//	fprintf(stderr,"%lu samples read\r", num_accesses);
-		//}
+		if((num_accesses % 100000) == 0){
+			fprintf(stderr,"%lu samples read\r", num_accesses);
+		}
 
 		//TODO: process each page reference
 		
